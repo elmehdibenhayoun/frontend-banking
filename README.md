@@ -37,5 +37,10 @@ Le projet vise à développer une application web utilisant Angular comme framew
 
 6. **Tests des Composants**
    - Tous les composants, services, intercepteurs et guards ont été testés de manière exhaustive pour assurer un fonctionnement correct et identifier tout comportement indésirable.
+     ![Gestion des Produits](https://github.com/elmehdibenhayoun/frontend-banking/blob/master/capture/adminlogin.png)
+     ![Gestion des Produits](https://github.com/elmehdibenhayoun/frontend-banking/blob/master/capture/adminhome.png)
+     ![Gestion des Produits](https://github.com/elmehdibenhayoun/frontend-banking/blob/master/capture/adminAccount.png)
+     ![Gestion des Produits](https://github.com/elmehdibenhayoun/frontend-banking/blob/master/capture/authjwt.png)
+     ![Gestion des Produits](https://github.com/elmehdibenhayoun/frontend-banking/blob/master/capture/jwt.png)
 
 
