@@ -6,22 +6,36 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Compte Rendu de Projet Angular avec API Spring Boot
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Introduction
 
-## Build
+Le projet vise à développer une application web utilisant Angular comme framework front-end et une API Spring Boot comme backend. L'application se concentre sur la gestion des clients, des comptes bancaires, des relations clients-comptes, et inclut un système d'authentification.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Description des Modules
 
-## Running unit tests
+1. **Interfaces**
+   - **Customers**: Interface dédiée à la gestion des clients.
+   - **Accounts**: Interface pour la gestion des comptes bancaires.
+   - **Customers-Accounts**: Interface gérant les relations entre clients et comptes.
+   - **Login**: Interface d'authentification permettant aux utilisateurs de se connecter.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Services**
+   - **Customers-Services**: Service associé à la gestion des clients.
+   - **Accounts-Services**: Service responsable de la gestion des comptes bancaires.
+   - **Auth-Service**: Service d'authentification assurant la sécurité de l'application.
 
-## Running end-to-end tests
+3. **Intercepteurs**
+   - Des intercepteurs ont été créés pour gérer les requêtes HTTP sortantes et entrantes, assurant un contrôle et une gestion des erreurs appropriés.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Guards**
+   - **Authentication Guard**: Un garde-frontière qui protège les routes nécessitant une authentification.
+   - **Authorization Guard**: Un garde-frontière qui gère l'autorisation d'accès aux différentes parties de l'application.
 
-## Further help
+5. **Définition des Routes**
+   - Les routes ont été définies de manière à permettre une navigation fluide et intuitive au sein de l'application. Des routes sont protégées par les guards d'authentification et d'autorisation pour garantir la sécurité.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. **Tests des Composants**
+   - Tous les composants, services, intercepteurs et guards ont été testés de manière exhaustive pour assurer un fonctionnement correct et identifier tout comportement indésirable.
+
+

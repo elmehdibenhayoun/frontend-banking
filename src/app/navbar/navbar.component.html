@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    
     <button
       class="navbar-toggler"
       type="button"
@@ -38,23 +38,16 @@
 
           </ul>
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link disabled"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
-            >Disabled</a
-          >
-        </li>
-      </ul>
-      <ul class="navbar" *ngIf="injector.isAuthenticated==true">
-        <li >
 
-          {{injector.username}}
+      </ul>
+      <ul class="navbar-nav " *ngIf="injector.isAuthenticated==true">
+        <li >
+          <button  class="btn btn-success m-lg-2">{{injector.username}}</button>
+
+
         </li>
         <li>
-          <button (click)="handleLogout()" class="btn btn-success">Logout</button>
+          <button (click)="handleLogout()" class="btn btn-success m-lg-2">Logout</button>
         </li>
       </ul>
     </div>

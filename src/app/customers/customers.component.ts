@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-customers',
@@ -16,12 +17,13 @@ import { Router } from '@angular/router';
 })
 export class CustomersComponent implements OnInit {
 
-
-
+  currentPage: number = 1;
+  pageSize: number = 5;
+  totalPages: number=5
   customers$!: Observable<Array<Customer>>;
   errorMessage!: string;
   searchFormGroup!: FormGroup | undefined;
-  constructor(private customerService: CustomerService, private formBuilder: FormBuilder,private router:Router) { }
+  constructor(private authService:AuthService,private customerService: CustomerService, private formBuilder: FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
     this.searchFormGroup = this.formBuilder.group({
@@ -38,6 +40,10 @@ export class CustomersComponent implements OnInit {
         return throwError(err);
       })
     )
+  }
+  gotoPage(page: number) {
+    this.currentPage = page;
+    this.handleSearchcustomers();
   }
   handleDeleteCustomer(c: Customer) {
     let conf=confirm("are you sure?");

@@ -15,8 +15,6 @@ import { AuthService } from '../services/auth.service';
 })
 export class AccountsComponent implements OnInit {
 
-
-
   accountFormGroup!: FormGroup;
   currentPage: number = 0;
   pageSize: number = 5;
